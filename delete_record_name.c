@@ -10,7 +10,7 @@ extern void delete_record_name(SLL **hp){
 	pslow("\033[34;1m\tEnter the Name: \033[0m\0", 1000);
 	sf("%s", str);
 	
-	SLL *del = *hp, *prev;
+	SLL *del = *hp;
 	int c = 0;	
 	while(del){
 		if(strcmp(str, del -> name) == 0){

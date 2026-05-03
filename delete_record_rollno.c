@@ -7,7 +7,7 @@ extern void delete_record_rollno(SLL **hp){
 		return;
 	}
 		//show_the_list(*hp);
-		int num, i =1, flag = 0;
+		int num, flag = 0;
 		pslow("\033[34;1m\tEnter the RollNo You Want to Delete: \033[0m", 1000);
 		sf("%d", &num);
 
