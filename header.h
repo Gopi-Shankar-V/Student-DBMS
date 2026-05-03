@@ -7,6 +7,11 @@
 #include <unistd.h>
 #include <ctype.h>   
 #include <math.h>
+/* ── db_utils.h ── */
+#include <sys/stat.h>    /* mkdir, chmod  */
+#include <sys/types.h>   /* chown, getuid, getgid */
+#include <pwd.h>         /* getpwuid      */
+#include <grp.h>         /* getgrgid      */
 
 #define pf printf
 #define sf scanf
@@ -20,6 +25,8 @@ typedef struct student{
 }SLL;
 
 extern int c;
+extern void get_db_path(char *buf, size_t size);
+extern void init_db_dir(void);
 
 void pslow(const char *, int);
 void add_new_record(SLL **);
